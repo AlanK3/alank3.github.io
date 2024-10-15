@@ -12,7 +12,10 @@
 <div class="container-header">
   <!-- Profile Header -->
   <div class="profile-header">
-    <img src="img/ak.jpg" alt="Profile Image">
+    <div id="profile-container">
+      <img src="img/ak.jpg" alt="Profile Image" id="pfp">
+      <div class="speech-bubble" id="speechBubble"></div>
+    </div>
     <div>
       <h1>Alan Kang</h1>
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="gray" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -47,6 +50,7 @@
         </svg>
       </a>
     </div>
+
     </div>
   </div>
 </div>
@@ -126,6 +130,8 @@
         <span class="slideshow-dot" onclick="currentSlide(4)"></span>
         <span class="slideshow-dot" onclick="currentSlide(5)"></span>
       </div>
+      <br>
+      <hr>
       <h2>Education</h2>
       <section class="education-section">
         <div class="education-container">
@@ -199,7 +205,7 @@
         <p>Description of Project 3. This is a placeholder for the third project.</p>
         <p><a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a></p>
       </div>
-      
+
         </section>
 
     <!-- Documents Section -->
@@ -238,33 +244,73 @@
       });
     });
   });
-  let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("slideshow-dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  let slideIndex = Math.floor(Math.random() * slides.length) + 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+
+  function showSlides(n) {
+    let i;
+    slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("slideshow-dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+
+  // Automatically change slides every 5 seconds
+  setInterval(function() {
+    plusSlides(1);
+  }, 5000);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const quotes = [
+      "你好!",
+      "Refresh for another quote!",
+      "Yo!",
+      "[insert inspiring quote here]",
+      "Hey there!",
+      "I think you've refreshed enough...",
+      "Howdy!",
+      "I-L-L!",
+      "This site is currently under construction!",
+      "We <3 IlliniCart!",
+      "Check out my socials!",
+      "Play krunker.io!",
+      "I'm a UI/UX enthusiast!",
+      "I'm a Data Science enthusiast!",
+    ];
+
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    const speechBubble = document.getElementById("speechBubble");
+    let i = 0;
+
+    function typeWriter() {
+      if (i < randomQuote.length) {
+        speechBubble.innerHTML += randomQuote.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40); // Adjust typing speed here
+      }
+    }
+
+    typeWriter();
+  });
+</script>
 </body>
 </html>
