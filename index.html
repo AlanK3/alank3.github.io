@@ -66,11 +66,66 @@
   <!-- About Me Section -->
     <section id="about" class="content-section active-section">
       <h2>About Me</h2>
-      <p>As a current student, I dedicate myself to learning about Information Sciences, especially
-        in my recently discovered passions for UI/UX and Data Science. I am also dabbling in Computer 
-        Science and Economics. I'm eager to apply what I’ve learned to projects in and out of class. 
-        I’m an avid <a href="https://www.oakpark.com/2019/12/17/oprf-swimmers-take-down-lths-in-dual-meet/">
-        swimmer</a>,<a href="#"> hiker</a>, <a href="#">YouTuber</a>, and <a href="#">photographer</a>.</p>
+      <p>Hey! I'm Alan! I'm a sophomore studying Information Sciences + Data Science at the University of Illinois Urbana-Champaign. As a current student, I dedicate myself to learning about Information Sciences, especially
+        in my recently discovered passions for UI/UX. I am also dabbling in Computer 
+        Science and Economics. I'm eager to apply what I've learned into meaningful projects outside of class. </p>
+
+      <h3>Hobbies</h3>
+      <p>I enjoy swimming, cooking, video games, and hiking.
+        I also create gaming <a href="https://www.youtube.com/@krispyanan" target="_blank">YouTube</a> videos and stream from time-to-time.
+      </p>
+      <br>
+      <div class="slideshow-container" style="position: relative; width: 100%; max-width: 400px; margin: auto;">
+        <div class="mySlides fade" style="width: 100%; padding-top: 100%; position: relative;">
+          <img src="/img/edge.JPEG" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div style="position: absolute; bottom: 8px; right: 16px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 3px;">
+            ⛰️ I enjoy exploring
+          </div>
+        </div>
+      
+        <div class="mySlides fade" style="width: 100%; padding-top: 100%; position: relative;">
+          <img src="/img/ew.JPEG" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div style="position: absolute; bottom: 8px; right: 16px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 3px;">
+            ☣️ Summer Job disasterclass
+          </div>
+        </div>
+      
+        <div class="mySlides fade" style="width: 100%; padding-top: 100%; position: relative;">
+          <img src="/img/swim.JPG" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div style="position: absolute; bottom: 8px; right: 16px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 3px;">
+            🏊 Been swimming since I was 5
+          </div>
+        </div>
+
+        <div class="mySlides fade" style="width: 100%; padding-top: 100%; position: relative;">
+          <img src="/img/snow.JPEG" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div style="position: absolute; bottom: 8px; right: 16px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 3px;">
+            💀 Forgot my jacket
+          </div>
+        </div>
+      
+        <div class="mySlides fade" style="width: 100%; padding-top: 100%; position: relative;">
+          <img src="/img/udon.JPG" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div style="position: absolute; bottom: 8px; right: 16px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 3px;">
+            👨‍🍳 I'm the next Ramsay btw
+          </div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%);">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);">&#10095;</a>
+      </div>
+      
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+        <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+        <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+        <span class="slideshow-dot" onclick="currentSlide(4)"></span>
+        <span class="slideshow-dot" onclick="currentSlide(5)"></span>
+      </div>
       <h2>Education</h2>
       <section class="education-section">
         <div class="education-container">
@@ -123,8 +178,29 @@
 
     <!-- Projects Section -->
     <section id="projects" class="content-section">
-      <p>coming soon</p>
-    </section>
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project Title 1</h3>
+        <img src="img/placeholder.jpg" alt="Project 1 Image" style="width:60%; height:auto;">
+        <p>Description of Project 1. This is a placeholder for the first project.</p>
+        <p><a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a></p>
+      </div>
+      <hr>
+      <div class="project">
+        <h3>Project Title 2</h3>
+        <img src="img/placeholder.jpg" alt="Project 2 Image" style="width:60%; height:auto;">
+        <p>Description of Project 2. This is a placeholder for the second project.</p>
+        <p><a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a></p>
+      </div>
+      <hr>
+      <div class="project">
+        <h3>Project Title 3</h3>
+        <img src="img/placeholder.jpg" alt="Project 3 Image" style="width:60%; height:auto;">
+        <p>Description of Project 3. This is a placeholder for the third project.</p>
+        <p><a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a></p>
+      </div>
+      
+        </section>
 
     <!-- Documents Section -->
     <section id="docs" class="content-section">
@@ -162,6 +238,32 @@
       });
     });
   });
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("slideshow-dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 </script>
 
 </body>
