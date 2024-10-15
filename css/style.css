@@ -253,29 +253,35 @@ caption {
   to {opacity: 1}
 }
 
+#profile-container {
+  position: relative;
+  display: inline-block; /* Ensure the container fits the image */
+}
+
+#pfp {
+  position: relative;
+  display: block; /* Ensure the image is treated as a block element */
+}
+
 .speech-bubble {
   position: absolute;
-  top: 189px;
-  right: 961px;
+  top: 100%; /* Position it right below the profile picture */
+  left: 20%; /* Align it to the left of the profile picture */
   display: inline-block;
   background-color: #ebebeb;
-  border: 1px solid #ebebeb;
   border-radius: 10px;
   padding: 10px;
   max-width: 250px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align:righjt;
 }
 
 .speech-bubble::before {
   content: "";
   position: absolute;
-  top: -46%;
-  right: 10px;
+  top: -20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
   border-width: 10px;
   border-style: solid;
   border-color: transparent transparent #ebebeb transparent;
-}
-
-#pfp {
-  position: relative;
 }
