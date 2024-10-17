@@ -24,6 +24,7 @@ body {
     align-items: flex-end;
     margin-bottom: 0px;
   }
+  
   .profile-header img {
     border-radius: 50%;
     width: 120px;
@@ -36,8 +37,9 @@ body {
     line-height: 1.5;
   }
   
-  h3 {
-    margin: 0px;    
+  h1 {
+    margin: 0;
+    margin-bottom: 1px;
     font-size: 38px;
   }
 
